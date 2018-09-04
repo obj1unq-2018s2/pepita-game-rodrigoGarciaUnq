@@ -17,7 +17,11 @@ program PepitaGame {
 	game.addVisual(buenosAires)
 	game.addVisual(villaGesell)
 	game.addVisualCharacter(pepita)
+	game.addVisualCharacter(roque)
 
+//  COLISIONES
+	game.whenCollideDo(roque, { algo => algo.teEncontro(roque) })
+	
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
