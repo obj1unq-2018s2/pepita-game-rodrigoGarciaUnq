@@ -2,8 +2,8 @@ import comidas.*
 
 object roque {
 
-	var property posicion = game.at(4, 4)
-	var property alimento = alpiste
+	var  posicion = game.at(4, 4)
+	var  alimento = alpiste
 	var posicionRandom = game.at(1.randomUpTo(9), 1.randomUpTo(9))
 
 	method imagen() = "jugador.png"
