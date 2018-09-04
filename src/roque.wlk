@@ -9,13 +9,14 @@ object roque {
 	method imagen() = "jugador.png"
 
 	method alimentar(algo) {
-		if (alimento != null) {
+		if (alimento = null) {
+			game.say(self, "No tengo alimento")		
+		} 
+		else {
 			algo.come(alimento)
 			game.addVisualIn(alimento,posicionRandom)
 			alimento = null
 			posicionRandom  = game.at(1.randomUpTo(9), 1.randomUpTo(9)) 
-		} else {
-			game.say(self, "No tengo alimento")
 		}
 	}
 
@@ -30,3 +31,7 @@ object roque {
 	}
 
 }
+
+	
+	
+	
